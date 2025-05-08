@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+</head>
+<body>
+  <main>
+    <section id="auth" class="active">
+      <h2>Login / Register</h2>
+      <form id="auth-form">
+        <input id="username" placeholder="Username" aria-label="Username" required>
+        <input id="password" placeholder="Password" type="password" aria-label="Password" required>
+        <div>
+          <button type="button" onclick="login()">Login</button>
+          <button type="button" onclick="register()">Register</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="todo" style="display: none;">
+      <h2 id="greet" aria-live="polite"></h2>
+      <form id="task-form">
+        <input id="category" placeholder="Category" aria-label="Task Category">
+        <input id="task" placeholder="Task" aria-label="Task Description" required>
+        <button type="button" onclick="addTask()">Add Task</button>
+      </form>
+      <h3>Tasks:</h3>
+      <ul id="taskList" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
